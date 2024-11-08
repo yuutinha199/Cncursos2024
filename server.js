@@ -22,7 +22,7 @@ app.post('/salvar', (req, res) => {
     const dados = `Nome: ${nome}\nEndereço: ${endereco}\nRG: ${rg}\nTelefone: ${telefone}\nE-mail: ${email}\nCPF: ${cpf}\nData: ${data}\n\n`;
 
     // Salva os dados no arquivo "dados.txt"
-    fs.appendFile('dados.txt', dados, (err) => {
+    fs.writeFile('dados.txt', dados, (err) => {
         if (err) {
             console.error('Erro ao salvar o arquivo:', err);
             return res.status(500).send('Erro ao salvar o arquivo');
