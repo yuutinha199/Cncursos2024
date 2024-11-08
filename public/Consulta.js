@@ -10,7 +10,7 @@ function botao() {
 
     // Verifica se todos os campos estão preenchidos
     if (nome === "" || ende === "" || rg === "" || tele === "" || email === "" || cpf === "" || data === "") {
-        alert("Preencha todos os campos.");
+
     } else {
         // Envia os dados ao servidor
         fetch('/salvar', {
@@ -28,7 +28,6 @@ function botao() {
             }
         })
         .then(data => {
-            alert(data); // Exibe a resposta do servidor
             window.location.href = 'taxa.html'; // Redireciona para "taxa.html"
         })
         .catch(error => {
