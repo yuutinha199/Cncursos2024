@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Rota para receber o valor dos campos e salvar em um arquivo .txt
+//* Rota para receber o valor dos campos e salvar em um arquivo .txt
 app.post('/salvar', (req, res) => {
     const { nome, endereco, rg, telefone, email, cpf, data } = req.body;
 
@@ -30,6 +30,7 @@ app.post('/salvar', (req, res) => {
         }
         res.send('Arquivo salvo com sucesso!');
     });
+   */
 });
 
 app.listen(PORT, () => {
